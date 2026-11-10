@@ -1,83 +1,50 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mi jueguito rosa 🎀</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi jueguito rosa</title>
 <style>
-:root{--pink:#f7a5d0;--hot:#c94d91;--plum:#71365d;--pale:#fff0f8;--cream:#fffafd;--line:#f4c5df}
-*{box-sizing:border-box}
-body{margin:0;padding:22px 12px;background:radial-gradient(circle at 15% 8%,#fff 0 2px,transparent 3px),linear-gradient(135deg,#ffe5f2,#f4c3e1 55%,#f9ddec);font-family:system-ui,-apple-system,sans-serif;color:var(--plum)}
-.console{width:min(760px,100%);margin:auto;padding:18px;background:linear-gradient(145deg,#ffc6e3,#f28fc3);border:5px solid #fff4fa;border-radius:34px;box-shadow:0 9px 0 #cb6b9f,0 22px 45px #9a477044,inset 0 2px 10px #fff;position:relative}
-.brand{text-align:center;font-weight:900;letter-spacing:.08em;font-size:clamp(19px,4vw,27px);color:#8c3268;text-shadow:1px 2px white;margin:0 0 12px}
-.brand small{display:block;font-size:10px;letter-spacing:.22em;font-weight:800}
-.deck{background:#ffeaf5;border:5px solid #fff8fc;border-radius:22px;padding:10px;box-shadow:inset 0 0 0 2px #e28ab9,0 4px 0 #d779aa}
-.screen-label{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:900;letter-spacing:.12em;color:#9b4775;padding:1px 5px 7px}
-.status{font-size:10px;background:#fff;border-radius:20px;padding:4px 9px;letter-spacing:0}
-.top-screen{height:clamp(230px,48vw,390px);background:#21172b;border:7px solid #d986b5;border-radius:13px;overflow:hidden;position:relative;box-shadow:inset 0 0 18px #0008}
-.top-screen iframe{width:100%;height:100%;border:0;background:#21172b}
-.welcome{height:100%;display:grid;place-content:center;text-align:center;color:#ffe7f4;padding:20px;background:radial-gradient(circle at 50% 40%,#62304f,#21172b 70%)}
-.welcome b{font-size:clamp(25px,5vw,38px)}.welcome span{font-size:13px;color:#f5b8d8;margin-top:8px}
-.hinge{height:17px;display:flex;justify-content:center;align-items:center;gap:9px}
-.hinge i{width:35px;height:5px;border-radius:9px;background:#d46fa7;box-shadow:inset 0 1px 2px #a94d7d}
-.lower{background:linear-gradient(#fff9fd,#ffeaf5);border:5px solid #fff8fc;border-radius:20px;padding:12px;box-shadow:inset 0 0 0 2px #e7a0c6}
-.lower-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:9px}
-.lower-head strong{font-size:12px;letter-spacing:.12em;color:#99436f}
-.back{border:0;border-radius:20px;padding:7px 12px;background:#9d4777;color:white;font-weight:800;cursor:pointer}
-.search{width:100%;border:2px solid #f0bfd9;border-radius:13px;padding:10px 12px;font:inherit;font-size:13px;outline:none;background:white;color:#71365d}
-.search:focus{border-color:#c94d91}
-.categories{display:flex;gap:7px;overflow:auto;padding:9px 0;scrollbar-width:thin}
-.chip{white-space:nowrap;border:1px solid #eab2d0;background:white;color:#98436f;border-radius:20px;padding:6px 11px;font-size:11px;font-weight:800;cursor:pointer}
-.chip.active{background:#c94d91;color:white;border-color:#c94d91}
-.library{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;max-height:210px;overflow:auto;padding:2px}
-.game-card{border:2px solid #f2c5dd;background:#fff;border-radius:13px;padding:8px 5px;text-align:center;color:#80385f;cursor:pointer;min-width:0}
-.game-card:hover,.game-card:focus{border-color:#c94d91;transform:translateY(-1px)}
-.cover{height:70px;border-radius:9px;display:grid;place-items:center;font-size:35px;background:linear-gradient(145deg,#ffd4e9,#f4a9d0);margin-bottom:6px}
-.game-card b{font-size:11px;display:block;line-height:1.2}.game-card small{font-size:9px;color:#a36b8a}
-.detail{display:none;text-align:center;padding:8px}.detail.show{display:block}.detail h2{font-size:17px;margin:5px}.detail p{font-size:12px;line-height:1.5;margin:6px}
-.play{border:0;background:#c94d91;color:white;border-radius:20px;padding:10px 20px;font-weight:900;cursor:pointer;margin:7px}
-.controls{display:none;gap:8px;justify-content:center;align-items:center;margin-top:9px}.controls.show{display:flex}
-.controls button{width:42px;height:38px;border:0;border-radius:12px;background:#fff;color:#9b4775;font-size:18px;font-weight:900;box-shadow:0 3px #df9fc2;touch-action:manipulation}
-.note{text-align:center;font-size:10px;color:#99577b;margin:9px 0 0}
-.decor{position:absolute;pointer-events:none;font-size:18px;opacity:.9}.d1{left:8px;top:48px}.d2{right:8px;top:48px}.d3{left:9px;bottom:17px}.d4{right:9px;bottom:17px}
-@media(max-width:480px){body{padding:10px 7px}.console{padding:10px;border-radius:25px}.deck{padding:7px}.top-screen{height:250px}.lower{padding:9px}.library{grid-template-columns:repeat(2,minmax(0,1fr));max-height:220px}.cover{height:62px}.decor{font-size:15px}}
+*{box-sizing:border-box}body{margin:0;padding:24px 10px;background:#fce8f5;color:#71365d;font-family:Verdana,Arial,sans-serif}
+.console{width:min(820px,100%);margin:auto;position:relative;padding:20px 24px 22px;background:linear-gradient(145deg,#ffc8e6,#f59acb);border:5px solid #fff8fc;border-radius:48px;box-shadow:inset 0 0 0 3px #e88cbd,0 10px 0 #c66b9c,0 20px 35px #9e477533}
+.brand{text-align:center;font-size:clamp(20px,4vw,30px);font-weight:1000;letter-spacing:2px;color:#a43d79;text-shadow:2px 2px white;margin:0 0 12px}
+.brand small{display:block;font-size:9px;letter-spacing:4px;margin-top:4px}
+.upper-wrap,.lower-wrap{background:#f9d8eb;border:4px solid #fff8fc;border-radius:25px;padding:12px;box-shadow:inset 0 0 0 2px #df8eb9,0 4px 0 #d278a9}
+.upper-wrap{width:78%;margin:auto}
+.label{font-size:10px;font-weight:bold;letter-spacing:2px;text-align:center;margin:0 0 8px;color:#a4497d}
+.screen{height:clamp(220px,38vw,350px);background:#211629;border:8px solid #d879ac;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 15px #000}
+.screen iframe{width:100%;height:100%;border:0}.welcome{height:100%;display:grid;place-content:center;text-align:center;color:#ffe6f5;background:radial-gradient(#673452,#211629 70%);padding:15px}.welcome b{font-size:clamp(22px,4vw,34px)}.welcome span{font-size:12px;margin-top:9px}
+.hinge{height:25px;display:flex;justify-content:center;align-items:center;gap:8px}.hinge span{width:45px;height:7px;border-radius:8px;background:#d276a8;box-shadow:inset 0 1px 2px #9c4c79}.mic{font-size:9px;font-weight:bold;letter-spacing:2px;color:#a54b7c}
+.bottom-row{display:grid;grid-template-columns:94px minmax(0,1fr) 94px;gap:12px;align-items:center}
+.side{display:flex;flex-direction:column;align-items:center;gap:14px}.pad{width:76px;height:76px;position:relative}.pad button{position:absolute;width:26px;height:26px;border:0;border-radius:5px;background:linear-gradient(#fff,#e7b7d3);box-shadow:0 3px 0 #b96796;color:#97416f;font-size:14px;font-weight:bold}.pad .up{left:25px;top:0}.pad .down{left:25px;bottom:0}.pad .left{left:0;top:25px}.pad .right{right:0;top:25px}.pad .center{left:25px;top:25px;background:#d88ab5;box-shadow:none}
+.action-grid{display:grid;grid-template-columns:repeat(2,36px);gap:8px;transform:rotate(-18deg)}.action-grid button{width:36px;height:36px;border:2px solid #fff;border-radius:50%;background:#d9579e;color:white;font-weight:900;box-shadow:0 3px 0 #a9447b}.action-grid button:nth-child(2),.action-grid button:nth-child(3){background:#ef8bbd}
+.lower-wrap{min-width:0}.lower-screen{min-height:190px;background:#fff8fc;border:5px solid #d879ac;border-radius:12px;padding:10px;box-shadow:inset 0 0 0 2px #f2c2dc}
+.lower-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}.lower-head b{font-size:11px;letter-spacing:1px}.back,.play{border:0;border-radius:20px;background:#b64d87;color:#fff;padding:7px 12px;font-weight:bold;cursor:pointer}
+.search{width:100%;padding:9px;border:2px solid #efbfd9;border-radius:12px;font:inherit;font-size:12px}.cats{display:flex;gap:6px;overflow:auto;padding:8px 0}.chip{border:1px solid #e6a8cb;border-radius:20px;background:white;color:#9b4776;padding:6px 10px;font-size:10px;white-space:nowrap;cursor:pointer}.chip.active{background:#bd5790;color:white}
+.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-height:115px;overflow:auto}.game{border:1px solid #edbed8;border-radius:10px;background:white;padding:7px 3px;color:#824064;cursor:pointer;font-size:10px}.cover{font-size:25px;display:block;margin-bottom:3px}.detail{display:none;text-align:center;font-size:12px}.detail.show{display:block}.detail h3{margin:4px}.detail p{margin:6px}
+.small-buttons{display:flex;gap:9px;justify-content:center;margin-top:10px}.small-buttons button{border:0;border-radius:12px;background:#fff4fa;color:#994878;padding:6px 12px;font-size:9px;font-weight:bold;box-shadow:0 2px 0 #d98db7}
+.bunny{font-size:34px;filter:drop-shadow(1px 2px white)}.decor{position:absolute;pointer-events:none;font-size:20px}.straw1{top:85px;left:8px}.straw2{top:85px;right:8px}.heart1{bottom:20px;left:12px}.heart2{bottom:20px;right:12px}
+.note{text-align:center;font-size:9px;color:#99577b;margin:12px 0 0}
+@media(max-width:560px){body{padding:12px 5px}.console{padding:13px 9px;border-radius:30px}.upper-wrap{width:94%;padding:8px}.bottom-row{grid-template-columns:57px minmax(0,1fr) 57px;gap:5px}.pad{transform:scale(.72)}.action-grid{transform:scale(.75) rotate(-18deg)}.lower-wrap{padding:7px}.lower-screen{padding:7px;min-height:185px}.games{grid-template-columns:repeat(2,minmax(0,1fr))}.decor{font-size:15px}.bunny{font-size:26px}.small-buttons{gap:4px}.small-buttons button{padding:6px 7px}}
 </style>
 </head>
 <body>
 <main class="console">
-<span class="decor d1">🍓</span><span class="decor d2">♡</span><span class="decor d3">♡</span><span class="decor d4">🍓</span>
-<h1 class="brand">♡ MI JUEGUITO ROSA ♡<small>MY LITTLE PINK CONSOLE</small></h1>
-<section class="deck">
-<div class="screen-label"><span>01 · PANTALLA DE JUEGO</span><span class="status" id="status">EN ESPERA</span></div>
-<div class="top-screen" id="topScreen"><div class="welcome"><b>🎀 ¡Hola, Liz! 🎀</b><span>Elige un juego en la pantalla de abajo</span></div></div>
-</section>
-<div class="hinge"><i></i><i></i><i></i><i></i></div>
-<section class="lower">
-<div class="lower-head"><strong>02 · MENÚ TÁCTIL</strong><button class="back" id="back" type="button">↶ MENÚ</button></div>
-<div id="menuView">
-<input class="search" id="search" type="search" placeholder="⌕ Buscar un juego...">
-<div class="categories" id="categories"><button class="chip active" data-cat="Todos">Todos</button><button class="chip" data-cat="Moda">Moda</button><button class="chip" data-cat="Monster High">Monster High</button></div>
-<div class="library" id="library">
-<button class="game-card" data-game="draculaura"><span class="cover">🦇💗</span><b>Draculaura Blind Date</b><small>Monster High · Moda</small></button>
+<span class="decor straw1">🍓</span><span class="decor straw2">🍓</span><span class="decor heart1">♡</span><span class="decor heart2">♡</span>
+<h1 class="brand">♡ MI JUEGUITO ROSA ♡<small>MY LITTLE PINK WORLD</small></h1>
+<section class="upper-wrap"><p class="label">01 · GAME SCREEN</p><div class="screen" id="top"><div class="welcome"><b>🎀 ¡HOLA, LIZ! 🎀</b><span>Selecciona un jueguito en la pantalla de abajo</span></div></div></section>
+<div class="hinge"><span></span><span></span><span></span><b class="mic">MIC · · ·</b><span></span><span></span><span></span></div>
+<div class="bottom-row">
+<aside class="side"><div class="pad" aria-label="Cruceta"><button class="up" data-control="ArrowUp">▲</button><button class="down" data-control="ArrowDown">▼</button><button class="left" data-control="ArrowLeft">◀</button><button class="right" data-control="ArrowRight">▶</button><button class="center" tabindex="-1"></button></div><div class="bunny">🐰</div></aside>
+<section class="lower-wrap"><div class="lower-screen">
+<div class="lower-head"><b>02 · MENÚ</b><button class="back" id="back">↶ VOLVER</button></div>
+<div id="menu"><input class="search" id="search" placeholder="⌕ Buscar juegos..."><div class="cats" id="cats"><button class="chip active" data-cat="Todos">Todos</button><button class="chip" data-cat="Moda">Moda</button><button class="chip" data-cat="Monster High">Monster High</button></div><div class="games" id="games"><button class="game" data-game="draculaura"><span class="cover">🦇💗</span>Draculaura Blind Date</button></div></div>
+<div class="detail" id="detail"><div style="font-size:28px">🦇💗</div><h3>Draculaura Blind Date</h3><p>Elige su peinado, ropa y accesorios.</p><p>Control: mouse o pantalla táctil.</p><button class="play" id="play">JUGAR ♡</button></div>
+</div><div class="small-buttons"><button>START</button><button>SELECT</button></div></section>
+<aside class="side"><div class="action-grid"><button data-control="x">X</button><button data-control="y">Y</button><button data-control="b">B</button><button data-control="a">A</button></div><div style="font-size:9px;font-weight:bold;letter-spacing:2px;color:#9c4778">♡ POWER ♡</div></aside>
 </div>
-</div>
-<div class="detail" id="detail"><div style="font-size:38px">🦇💗</div><h2>Draculaura Blind Date</h2><p>Ayuda a Draculaura a elegir su look, peinado y accesorios para su cita.</p><p>Controles: mouse o pantalla táctil.</p><button class="play" id="play" type="button">JUGAR ♡</button></div>
-<div class="controls" id="controls" aria-label="Controles táctiles"><button data-key="left">←</button><button data-key="up">↑</button><button data-key="down">↓</button><button data-key="right">→</button><button data-key="a">A</button><button data-key="b">B</button></div>
-</section>
-<p class="note">🍓 Hecha con amor, fresitas y corazones · Compatible con compu y celular 🍓</p>
+<p class="note">🍓 FRESITAS · CORAZONES · PIXEL LOVE 🍓</p>
 </main>
 <script>
-(()=>{const top=document.getElementById('topScreen'),status=document.getElementById('status'),menu=document.getElementById('menuView'),detail=document.getElementById('detail'),back=document.getElementById('back'),controls=document.getElementById('controls'),search=document.getElementById('search'),library=document.getElementById('library');let selected='';
-function showMenu(){top.innerHTML='<div class="welcome"><b>🎀 ¡Hola, Liz! 🎀</b><span>Elige un juego en la pantalla de abajo</span></div>';status.textContent='EN ESPERA';menu.style.display='block';detail.classList.remove('show');back.style.display='none';controls.classList.remove('show');selected=''}
-function choose(id){selected=id;menu.style.display='none';detail.classList.add('show');back.style.display='inline-block';status.textContent='JUEGO SELECCIONADO'}
-function play(){if(selected!=='draculaura')return;top.innerHTML='<iframe title="Draculaura Blind Date" src="https://kiz10.com/embed/draculaura-blind-date/" allow="fullscreen; autoplay" allowfullscreen loading="eager"></iframe>';status.textContent='DRACULAURA · JUGANDO';detail.classList.remove('show');controls.classList.remove('show')}
-library.addEventListener('click',e=>{const card=e.target.closest('[data-game]');if(card)choose(card.dataset.game)});
-document.getElementById('play').addEventListener('click',play);back.addEventListener('click',showMenu);
-search.addEventListener('input',()=>{const q=search.value.toLocaleLowerCase();library.querySelectorAll('.game-card').forEach(card=>card.style.display=card.innerText.toLocaleLowerCase().includes(q)?'':'none')});
-document.getElementById('categories').addEventListener('click',e=>{const chip=e.target.closest('[data-cat]');if(!chip)return;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c===chip));const cat=chip.dataset.cat;library.querySelectorAll('.game-card').forEach(card=>card.style.display=cat==='Todos'||card.innerText.includes(cat)?'':'none')});
-document.querySelectorAll('[data-key]').forEach(b=>{b.addEventListener('click',()=>{const key=b.dataset.key;document.dispatchEvent(new KeyboardEvent('keydown',{key:key==='left'?'ArrowLeft':key==='right'?'ArrowRight':key==='up'?'ArrowUp':key==='down'?'ArrowDown':key}))})});
-showMenu();
-})();
+(()=>{const top=document.getElementById('top'),menu=document.getElementById('menu'),detail=document.getElementById('detail'),back=document.getElementById('back'),games=document.getElementById('games');let chosen='';function home(){top.innerHTML='<div class="welcome"><b>🎀 ¡HOLA, LIZ! 🎀</b><span>Selecciona un jueguito en la pantalla de abajo</span></div>';menu.style.display='block';detail.classList.remove('show');chosen=''}games.addEventListener('click',e=>{let g=e.target.closest('[data-game]');if(g){chosen=g.dataset.game;menu.style.display='none';detail.classList.add('show')}});document.getElementById('play').onclick=()=>{if(chosen==='draculaura'){top.innerHTML='<iframe title="Draculaura Blind Date" src="https://kiz10.com/embed/draculaura-blind-date/" allow="fullscreen; autoplay" allowfullscreen></iframe>';detail.classList.remove('show')}};back.onclick=home;document.getElementById('search').oninput=e=>{let q=e.target.value.toLowerCase();games.querySelectorAll('.game').forEach(g=>g.style.display=g.innerText.toLowerCase().includes(q)?'':'none')};document.getElementById('cats').onclick=e=>{let c=e.target.closest('[data-cat]');if(!c)return;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===c));games.querySelectorAll('.game').forEach(g=>g.style.display=c.dataset.cat==='Todos'||g.innerText.includes(c.dataset.cat)?'':'none')};document.querySelectorAll('[data-control]').forEach(b=>b.onclick=()=>{let k=b.dataset.control;document.dispatchEvent(new KeyboardEvent('keydown',{key:({x:'x',y:'y',a:'a',b:'b'}[k]||k),bubbles:true}))});home()})();
 </script>
-</body>
-</html>
+</body></html>
